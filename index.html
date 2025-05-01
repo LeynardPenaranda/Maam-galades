@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="icon" type="image/png" href="images/removedbg-Logo.png.png">
+    
+    <title>Login</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="second-background">
+        <div class="header">
+            <div class="logo-container">
+                <img src="images/removedbg-Logo.png.png" alt="Logo">
+            </div>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="login-button-containers">
+                <button onclick=showSidebar() id="login">Login</button>
+                <button onclick=show_Register_sidebar() id="register">Register</button>
+            </div>
+        </div>
+        <div class="body">
+            <div class="box1-container">
+                <div class="paragraph-container">
+                    <h2>Don’t have an account yet?</h2><br><p>Join us today and enjoy a faster, easier experience! It only takes a minute to register.</p>
+                </div>
+                <div class="Intro-button-container">
+                    <p>Please register to be part of the system.</p>
+                    <button onclick=show_Register_sidebar()>Register Now</button>
+                </div>
+            </div>
+            <div class="box2-container">
+                <div class="first-line">
+                    <div class="second-line">
+                        <div class="third-line">
+                            <div class="image-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img id="aaron-jem" src="images/aaron.png" alt="jem&aaron">
+            </div>
+        </div>
+
+        <div class="login-container">
+            <div class="header-modal">
+                <div onclick=hideSidebar() class="exit">&times;</div>
+            </div>
+            <div class="outer-body-modal">
+                <div class="inner-body-modal">
+                    <div class="modal-logo-container">
+                        <img src="images/removedbg-Logo.png.png" alt="Logo">
+                    </div>
+                    <form class="form-modal" action="">
+                        <p>Please login to continue to your account.</p>
+                        <div class="input-container">
+                            <input type="text" id="username" required>
+                            <label class="label" for="username">Username</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="password"required>
+                            <label class="label" for="password">Password</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox"><p>Keep me Logged in</p>
+                        </div>
+                        <button class="login-submit-btn">Login</button>
+                        <div class="or-container">
+                            <div class="line"></div>
+                            <p>or</p>
+                        </div>
+                        <div class="request-container">
+                            <p>Need an account?
+                            <a href="#" onclick=show_Register_sidebar()>Register here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="register-container">
+            <div class="header-register-modal">
+                <div onclick=hide_Register_sidebar() class="exit">&times;</div>
+            </div>
+            <div class="register-body-modal">
+                <div class="register-modal-logo-container">
+                    <img src="images/removedbg-Logo.png.png" alt="Logo">
+                </div>
+                <form class="register-form" action="">
+                    <p>Please Register to create an account.</p>
+                        <div class="input-container">
+                            <input type="text" id="username" required>
+                            <label class="label" for="username">Username</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="email" required>
+                            <label class="label" for="email">Email</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="password"required>
+                            <label class="label" for="password">Password</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="Retype-password"required>
+                            <label class="label" for="Retype-password">Retype-Password</label>
+                        </div>
+                        <button class="Register-submit-btn">Register</button>
+                </form>
+                <div class="lower-part-body">
+                    <div class="or-container">
+                        <div class="line"></div>
+                        <p>or</p>
+                    </div>
+                    <div class="Register-request-container">
+                        <p>Already have an account?
+                        <a href="#" onclick=showSidebar()>Login here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
